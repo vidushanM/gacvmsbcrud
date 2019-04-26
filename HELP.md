@@ -1,3 +1,8 @@
+####Application Properties File
+
+Remove `example` from `example.application.properties` and replace with your database url,
+batabase user and database password.
+
 ####Post Body
 When creating or updating an entity use snake case in JSON body. For example,
 
