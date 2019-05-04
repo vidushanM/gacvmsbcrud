@@ -18,7 +18,7 @@ public class BankController {
         return new ResponseEntity<>(bankService.getBankByBankCode(bankCode), HttpStatus.OK);
     }
 
-    @GetMapping("/utils/banks")
+    @GetMapping("/utils/banksd")
     public ResponseEntity<List<Bank>> getAllBanks() {
         return new ResponseEntity<>(bankService.getAllBanks(), HttpStatus.OK);
     }
