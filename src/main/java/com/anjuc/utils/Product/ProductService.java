@@ -18,6 +18,10 @@ public class ProductService {
         return productRepository.findAll();
     }
 
+//    public Product getSpeceficProducts(){
+//        return productRepository.();
+//    }
+
     public Product getProductByProductCode (String productCode){
         return productRepository.findProductByProductCode(productCode);
     }
@@ -38,6 +42,9 @@ public class ProductService {
 
         return productRepository.save(product);
 
+    }
 
+    public void deleteProduct (int id){
+        productRepository.deleteProductById(id);
     }
 }

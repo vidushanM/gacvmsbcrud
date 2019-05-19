@@ -18,6 +18,16 @@ public class BuyerController {
         return new ResponseEntity<>(buyerService.getBuyerByBuyerCode(buyerCode), HttpStatus.OK);
     }
 
+
+// Get mapping for user login
+
+    @GetMapping(value = "/utils/buyers",params = "buyer_email")
+    public ResponseEntity<Buyer> getBuyerByBuyerEmail (@RequestParam(name = "buyer_email") String buyerEmail){
+        return new ResponseEntity<>(buyerService.getBuyerByBuyerEmail(buyerEmail), HttpStatus.OK);
+    }
+
+
+
     @GetMapping("/utils/buyers")
     public ResponseEntity<List<Buyer>> getAllBuyers(){
         return new ResponseEntity<>(buyerService.getAllBuyers(), HttpStatus.OK);

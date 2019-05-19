@@ -21,6 +21,10 @@ public class BuyerService {
         return buyerRepository.findBuyerByBuyerCode(buyerCode);
     }
 
+    public Buyer getBuyerByBuyerEmail (String buyerEmail){
+        return buyerRepository.findBuyerByBuyerEmail(buyerEmail);
+    }
+
     public Buyer createBuyer(Buyer buyer){
         return buyerRepository.save(buyer);
     }

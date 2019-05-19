@@ -38,4 +38,6 @@ public class BankController {
         bankService.deleteBank(id);
         return new ResponseEntity(HttpStatus.OK);
     }
+
+
 }

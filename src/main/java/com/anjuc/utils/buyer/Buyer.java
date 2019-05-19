@@ -50,7 +50,6 @@ public class Buyer {
     }
 
     public Buyer(){
-
     }
 
     public int getId() {
@@ -67,6 +66,9 @@ public class Buyer {
 
     public void setBuyerCode(String buyerCode) {
         this.buyerCode = buyerCode;
+    }
+    public void setBuyer_code(String buyer_code) {
+        this.buyerCode = buyer_code;
     }
 
     public String getBuyerFirstName() {
@@ -98,6 +100,9 @@ public class Buyer {
     }
 
     public void setBuyerPassword(String buyerPassword) {
+        this.buyerPassword = buyerPassword;
+    }
+    public void setBuyer_password(String buyerPassword) {
         this.buyerPassword = buyerPassword;
     }
 
