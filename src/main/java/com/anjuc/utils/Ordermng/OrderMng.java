@@ -1,4 +1,4 @@
-package com.anjuc.utils.Product;
+package com.anjuc.utils.order;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -6,38 +6,35 @@ import org.hibernate.annotations.UpdateTimestamp;
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity
-@Table(name = "products")
-public class Product {
+@Entitys
+@Table(name = "ordermng")
+public class OrderMngs {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Column(name = "product_code", nullable = false, unique = true)
-    private String productCode;
+    @Column(name = "order_code", nullable = false, unique = true)
+    private String orderCode;
 
-    @Column(name = "product_name", nullable = false)
-    private String productName;
+    @Column(name = "order_name", nullable = false)
+    private String orderName;
 
-    @Column(name ="product_description", nullable = false)
-    private String productDescription;
+    @Column(name ="order_description", nullable = false)
+    private String orderDescription;
 
-    @Column(name = "product_category",nullable = true)
-    private String productCategory;
+    @Column(name = "order_Date",nullable = true)
+    private String orderDate;
 
-    @Column(name = "product_image", nullable = true)
-    private String productImage;
+    @Column(name = "order_buyer_id", nullable = false)
+    private int orderBuyerId;
 
-    @Column(name = "product_seller_id", nullable = false)
-    private int productSellerId;
-
-    public int getProductSellerId() {
-        return productSellerId;
+    public int getorderBuyerId() {
+        return orderBuyerId;
     }
 
-    public void setProductSellerId(int productSellerId) {
-        this.productSellerId = productSellerId;
+    public void setorderBuyerId(int orderBuyerId) {
+        this.orderBuyerId = orderBuyerId;
     }
 
     @Column(name = "created_at")
@@ -48,60 +45,60 @@ public class Product {
     @UpdateTimestamp
     private Date updatedAt;
 
-    public Product(){
+    public order(){
 
     }
 
-    public Product(String productCode, String productName, String productDescription, String productCategory, String productImage){
-        this.setProductCode(productCode);
-        this.setProductName(productName);
-        this.setProductDescription(productDescription);
-        this.setProductCategory(productCategory);
-        this.setProductImage(productImage);
+    public order(String orderCode, String orderName, String orderDescription, String orderDate, String orderImage){
+        this.setorderCode(orderCode);
+        this.setorderName(orderName);
+        this.setorderDescription(orderDescription);
+        this.setorderDate(orderDate);
+       
     }
 
     public int getId() {
         return id;
     }
 
-    public String getProductCode() {
-        return productCode;
+    public String getorderCode() {
+        return orderCode;
     }
 
-    public void setProductCode(String productCode) {
-        this.productCode = productCode;
+    public void setorderCode(String orderCode) {
+        this.orderCode = orderCode;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getorderName() {
+        return orderName;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setorderName(String orderName) {
+        this.orderName = orderName;
     }
 
-    public String getProductDescription() {
-        return productDescription;
+    public String getorderDescription() {
+        return orderDescription;
     }
 
-    public void setProductDescription(String productDescription) {
-        this.productDescription = productDescription;
+    public void setorderDescription(String orderDescription) {
+        this.orderDescription = orderDescription;
     }
 
-    public String getProductCategory() {
-        return productCategory;
+    public String getorderDate() {
+        return orderDate;
     }
 
-    public void setProductCategory(String productCategory) {
-        this.productCategory = productCategory;
+    public void setorderDate(String orderDate) {
+        this.orderDate = orderDate;
     }
 
-    public String getProductImage() {
-        return productImage;
+    public String getorderImage() {
+        return orderImage;
     }
 
-    public void setProductImage(String productImage) {
-        this.productImage = productImage;
+    public void setorderImage(String orderImage) {
+        this.orderImage = orderImage;
     }
 
     public Date getCreatedAt() {
