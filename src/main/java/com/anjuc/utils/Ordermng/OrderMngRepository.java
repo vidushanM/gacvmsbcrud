@@ -1,9 +1,9 @@
-package com.anjuc.utils.Product;
+package com.anjuc.utils.Order;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ProductRepository extends JpaRepository<Product, Integer> {
-    public Product findProductByProductCode(String ProductCode);
-    public void deleteProductById (int id);
-    public Product findProductById (int id);
+public interface OrderRepository extends JpaRepository<Order, Integer> {
+    public Order findOrderByOrderCode(String OrderCode);
+    public void deleteOrderById (int id);
+    public Order findOrdersById (int id);
 }
