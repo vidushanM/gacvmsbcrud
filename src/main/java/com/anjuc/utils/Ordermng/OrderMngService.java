@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class OrderService {
+public class OrderMngService {
 
     @Autowired
     OrderRepository OrderRepository;
