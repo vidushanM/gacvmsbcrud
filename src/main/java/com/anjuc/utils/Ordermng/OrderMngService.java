@@ -1,4 +1,4 @@
-package com.anjuc.utils.Product;
+package com.anjuc.utils.Order;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,34 +9,34 @@ import java.util.List;
 
 @Service
 @Transactional
-public class ProductService {
+public class OrderService {
 
     @Autowired
-    ProductRepository productRepository;
+    OrderRepository OrderRepository;
 
-    public List<Product> getAllProducts(){
-        return productRepository.findAll();
+    public List<Order> getAllOrders(){
+        return OrderRepository.findAll();
     }
 
-    public Product getProductByProductCode (String productCode){
-        return productRepository.findProductByProductCode(productCode);
+    public Order getOrderByOrderCode (String OrderCode){
+        return OrderRepository.findOrderByOrderCode(OrderCode);
     }
 
-    public Product createProduct (Product product){
-        return productRepository.save(product);
+    public Order createOrder (Order Order){
+        return OrderRepository.save(Order);
     }
 
-    public Product updateProduct (int id, Product productDetails){
-        Product product = productRepository.findProductById(id);
+    public Order updateOrder (int id, Order OrderDetails){
+        Order Order = OrderRepository.findOrderById(id);
 
-        product.setProductCode(productDetails.getProductCode());
-        product.setProductName(productDetails.getProductName());
-        product.setProductDescription(productDetails.getProductDescription());
-        product.setProductCategory(productDetails.getProductCategory());
-        product.setProductImage(productDetails.getProductImage());
-        product.setProductSellerId(productDetails.getProductSellerId());
+        Order.setOrderCode(OrderDetails.getOrderCode());
+        Order.setOrderName(OrderDetails.getOrderName());
+        Order.setOrderDescription(OrderDetails.getOrderDescription());
+        Order.setOrderCategory(OrderDetails.getOrderCategory());
+        Order.setOrderImage(OrderDetails.getOrderImage());
+        Order.setOrderSellerId(OrderDetails.getOrderSellerId());
 
-        return productRepository.save(product);
+        return OrderRepository.save(Order);
 
 
     }
