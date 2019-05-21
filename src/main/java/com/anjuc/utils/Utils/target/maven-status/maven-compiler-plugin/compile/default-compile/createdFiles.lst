@@ -1,0 +1,5 @@
+com\anjuc\utils\buyer\BuyerRepository.class
+com\anjuc\utils\buyer\BuyerController.class
+com\anjuc\utils\buyer\Buyer.class
+com\anjuc\utils\buyer\BuyerService.class
+com\anjuc\utils\buyer\UtilsApplication.class
